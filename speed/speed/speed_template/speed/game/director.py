@@ -42,6 +42,9 @@ class Director:
         letter = self._input_service.get_letter()
 
         "Checks the letter in word" 
+        for letter in Word:
+            if ("letter == buffer"):
+                break
 
 
     def _do_updates(self):

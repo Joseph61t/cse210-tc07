@@ -1,4 +1,5 @@
 from time import sleep
+from game import constants
 from game.word import Word
 
 class Director:
@@ -10,7 +11,11 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
-        self._word = Word()
+        self._word1 = Word()
+        self._word2 = Word()
+        self._word3 = Word()
+        self._word4 = Word()
+        self._word5 = Word()
         self._input_service = input_service
         self._keep_playing = True
         self._output_service = output_service
@@ -36,10 +41,16 @@ class Director:
         """
         letter = self._input_service.get_letter()
 
+        "Checks the letter in word" 
+
 
     def _do_updates(self):
         if (self._keep_playing == True):
-            self._word = Word()
+            self._word1.point.add()
+            self._word2.point.add()
+            self._word3.point.add()
+            self._word4.point.add()
+            self._word5.point.add()
         
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
@@ -50,6 +61,9 @@ class Director:
             self (Director): An instance of Director.
         """
         self._output_service.clear_screen()
-        self._output_service.draw_actor(self._word)
-        self._output_service.draw_actor(self._score)
+        self._output_service.draw_actor(self._word1)       
+        self._output_service.draw_actor(self._word2)
+        self._output_service.draw_actor(self._word3)
+        self._output_service.draw_actor(self._word4)
+        self._output_service.draw_actor(self._word5)
         self._output_service.flush_buffer()

@@ -2,9 +2,9 @@ from input_service import InputService
 
 
 class Buffer:
-    def __init__(self):
+    def __init__(self, input_service):
         
-        self.inputs = InputService(self.screen)
+        self.inputs = input_service
         self.keys_pressed = ''
     
     #should get inputs and append to key_pressed string

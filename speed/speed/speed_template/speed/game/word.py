@@ -9,12 +9,23 @@ class Word(Actor):
     def __init__(self):
 
         super().__init__()
+        self.word = ""
+        velocity = Point(3,0)
+        self.set_velocity(velocity)
 
-    def velocity(self):
+    def get_word(self):
 
-        self.velocity = randint(1,10)
+        return self.word
+
+    def set_word(self, word):
+        self.word = word
 
 
-    def text(self):
+
+        
+
+    
+
+        
 
 

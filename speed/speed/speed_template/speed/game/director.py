@@ -2,6 +2,7 @@ from speed.speed.speed_template.speed.game.dictionary import Dictionary
 from time import sleep
 from game import constants
 from game.word import Word
+from game.buffer import Buffer
 
 class Director:
 
@@ -17,7 +18,11 @@ class Director:
         self._word3 = Word()
         self._word4 = Word()
         self._word5 = Word()
+
         self.dict = Dictionary()
+
+        self._buffer = Buffer()
+
         self._input_service = input_service
         self._keep_playing = True
         self._output_service = output_service
@@ -41,12 +46,13 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        letter = self._input_service.get_letter()
+        letter = self._buffer.get_input()
 
         "Checks the letter in word" 
         for letter in Word:
-            if ("letter == buffer"):
-                break
+            for letter in Buffer:
+                if (letter == Buffer):
+                    break
 
 
     def _do_updates(self):

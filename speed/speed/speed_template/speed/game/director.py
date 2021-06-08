@@ -51,7 +51,7 @@ class Director:
         "Checks the letter in word" 
         for letter in Word:
             for letter in Buffer:
-                if (letter == Buffer):
+                if (letter != Buffer):
                     break
 
 

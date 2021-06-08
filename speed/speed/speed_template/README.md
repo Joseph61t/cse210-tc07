@@ -41,3 +41,4 @@ root                    (project root folder)
 ## Authors
 ---
 * # Hunter Powell
+* # Joseph Hampton

@@ -2,6 +2,7 @@ from game import constants
 from game.actor import Actor
 from game.point import Point
 from game.dictionary import Dictionary
+import random
 
 
 class Word(Actor):
@@ -12,7 +13,7 @@ class Word(Actor):
 
     def velocity(self):
 
-        self.velocity = randint(1,10)
+        self.velocity = random.randint(1,10)
 
 
     def text(self):

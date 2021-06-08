@@ -1,3 +1,4 @@
+from speed.speed.speed_template.speed.game.dictionary import Dictionary
 from time import sleep
 from game import constants
 from game.word import Word
@@ -16,6 +17,7 @@ class Director:
         self._word3 = Word()
         self._word4 = Word()
         self._word5 = Word()
+        self.dict = Dictionary()
         self._input_service = input_service
         self._keep_playing = True
         self._output_service = output_service

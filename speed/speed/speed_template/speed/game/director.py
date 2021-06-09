@@ -1,4 +1,4 @@
-from speed.speed.speed_template.speed.game.dictionary import Dictionary
+from game.dictionary import Dictionary
 from time import sleep
 from game import constants
 from game.word import Word
@@ -64,11 +64,8 @@ class Director:
 
     def _do_updates(self):
         if (self._keep_playing == True):
-            self._word1.point.add()
-            self._word2.point.add()
-            self._word3.point.add()
-            self._word4.point.add()
-            self._word5.point.add()
+            for word in self.words:
+                word.position.add(word.get_velocity())
         
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 

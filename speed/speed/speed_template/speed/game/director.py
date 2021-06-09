@@ -21,9 +21,8 @@ class Director:
 
         self.dict = Dictionary()
 
-        self._buffer = Buffer()
-
         self._input_service = input_service
+        self._buffer = Buffer(self._input_service)
         self._keep_playing = True
         self._output_service = output_service
         
@@ -51,7 +50,7 @@ class Director:
         "Checks the letter in word" 
         for letter in Word:
             for letter in Buffer:
-                if (letter == Buffer):
+                if (letter != Buffer):
                     break
 
 

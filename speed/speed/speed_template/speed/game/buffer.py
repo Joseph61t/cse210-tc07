@@ -1,4 +1,4 @@
-from input_service import InputService
+from game.input_service import InputService
 
 
 class Buffer:

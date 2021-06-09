@@ -8,8 +8,9 @@ import random
 class Word(Actor):
 
     def __init__(self):
-
+        self.position = Point(0,0)
         super().__init__()
+        
         self.word = ""
         velocity = Point(3,0)
         self.set_velocity(velocity)

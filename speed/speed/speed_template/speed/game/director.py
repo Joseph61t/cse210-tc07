@@ -1,4 +1,4 @@
-from speed.speed.speed_template.speed.game.dictionary import Dictionary
+from game.dictionary import Dictionary
 from time import sleep
 from game import constants
 from game.word import Word

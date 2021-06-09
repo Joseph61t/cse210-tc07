@@ -13,11 +13,17 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
+        self.words = []
         self._word1 = Word()
+        self.words.append(self._word1)
         self._word2 = Word()
+        self.words.append(self._word2)
         self._word3 = Word()
+        self.words.append(self._word3)
         self._word4 = Word()
+        self.words.append(self._word4)
         self._word5 = Word()
+        self.words.append(self._word5)
 
         self.dict = Dictionary()
 
@@ -45,13 +51,15 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        letter = self._buffer.get_input()
+        buffer_word = self._buffer.get_input()
 
-        "Checks the letter in word" 
-        for letter in Word:
-            for letter in Buffer:
-                if (letter != Buffer):
-                    break
+        #Checks if the words match
+        for word in self.words:
+            if buffer_word == word:
+                # TODO add points, delete, and create new word!
+                pass
+        
+
 
 
     def _do_updates(self):

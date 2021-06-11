@@ -35,6 +35,6 @@ class InputService:
                 sys.exit()
             elif event == 10: 
                 result = "*"
-            elif event >= 97 and event <= 122: 
+            elif event >= 97 and event <= 122 or event == 13: 
                 result = chr(event)
         return result

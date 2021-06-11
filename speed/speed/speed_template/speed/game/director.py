@@ -56,18 +56,26 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
-        buffer_word = self._buffer.get_input()
-
-        #Checks if the words match
-        for word in self.words:
-            if buffer_word == word:
-                # TODO add points, delete, and create new word!
-                pass
+        self._buffer.get_input()
         
 
 
 
     def _do_updates(self):
+        buffer_word = self._buffer.get_buffer_word()
+
+
+        if '\r' in buffer_word:
+            self._buffer.clear_buffer()
+            buffer_word = buffer_word.strip('\r')
+            #Checks if the words match
+            for word in self.words:
+                if buffer_word == word.word:
+                    self._buffer.clear_buffer()
+        
+
+                
+
         if (self._keep_playing == True):
             for word in self.words:
                 if word._position.get_x() < 60:

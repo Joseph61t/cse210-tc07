@@ -21,7 +21,7 @@ class Actor:
             self (Actor): an instance of Actor.
         """
         self._text = ""
-        self._position = Point(0, random.randint(3,11))
+        self._position = Point(0, 0)
         self._velocity = Point(0, 0)
         
     def get_position(self):

@@ -15,19 +15,19 @@ class Director:
         """
         self.dict = Dictionary()
         self.words = []
-        self._word1 = Word(3)
+        self._word1 = Word(0,3)
         self._word1.set_word(self.dict.get_word())
         self.words.append(self._word1)
-        self._word2 = Word(5)
+        self._word2 = Word(0,5)
         self._word2.set_word(self.dict.get_word())
         self.words.append(self._word2)
-        self._word3 = Word(7)
+        self._word3 = Word(0,7)
         self._word3.set_word(self.dict.get_word())
         self.words.append(self._word3)
-        self._word4 = Word(9)
+        self._word4 = Word(0,9)
         self._word4.set_word(self.dict.get_word())
         self.words.append(self._word4)
-        self._word5 = Word(11)
+        self._word5 = Word(0,11)
         self._word5.set_word(self.dict.get_word())
         self.words.append(self._word5)
 
@@ -90,5 +90,6 @@ class Director:
             self (Director): An instance of Director.
         """
         self._output_service.clear_screen()
-        self._output_service.draw_actors(self.words)       
+        self._output_service.draw_actors(self.words)
+        self._output_service.draw_actor(self._buffer)       
         self._output_service.flush_buffer()

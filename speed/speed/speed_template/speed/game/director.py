@@ -13,19 +13,24 @@ class Director:
         Args:
             self (Director): an instance of Director.
         """
+        self.dict = Dictionary()
         self.words = []
         self._word1 = Word()
+        self._word1.set_word(self.dict.get_word())
         self.words.append(self._word1)
         self._word2 = Word()
+        self._word2.set_word(self.dict.get_word())
         self.words.append(self._word2)
         self._word3 = Word()
+        self._word3.set_word(self.dict.get_word())
         self.words.append(self._word3)
         self._word4 = Word()
+        self._word4.set_word(self.dict.get_word())
         self.words.append(self._word4)
         self._word5 = Word()
+        self._word5.set_word(self.dict.get_word())
         self.words.append(self._word5)
 
-        self.dict = Dictionary()
 
         self._input_service = input_service
         self._buffer = Buffer(self._input_service)
@@ -65,7 +70,7 @@ class Director:
     def _do_updates(self):
         if (self._keep_playing == True):
             for word in self.words:
-                word.position.add(word.get_velocity())
+                word._position = word._position.add(word.get_velocity())
         
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 
@@ -76,9 +81,5 @@ class Director:
             self (Director): An instance of Director.
         """
         self._output_service.clear_screen()
-        self._output_service.draw_actor(self._word1)       
-        self._output_service.draw_actor(self._word2)
-        self._output_service.draw_actor(self._word3)
-        self._output_service.draw_actor(self._word4)
-        self._output_service.draw_actor(self._word5)
+        self._output_service.draw_actors(self.words)       
         self._output_service.flush_buffer()

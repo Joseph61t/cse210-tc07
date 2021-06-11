@@ -1,6 +1,6 @@
 from game import constants
 from game.point import Point
-
+import random
 class Actor:
     """A visible, moveable thing that participates in the game. The responsibility of Actor is to keep track of its appearance, position 
     and velocity in 2d space.
@@ -21,7 +21,7 @@ class Actor:
             self (Actor): an instance of Actor.
         """
         self._text = ""
-        self._position = Point(0, 0)
+        self._position = Point(0, random.randint(3,11))
         self._velocity = Point(0, 0)
         
     def get_position(self):

@@ -70,7 +70,8 @@ class Director:
     def _do_updates(self):
         if (self._keep_playing == True):
             for word in self.words:
-                word._position = word._position.add(word.get_velocity())
+                if word._position.get_x() < 60:
+                    word._position = word._position.add(word.get_velocity())
         
     def _do_outputs(self):
         """Outputs the important game information for each round of play. In 

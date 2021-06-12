@@ -7,12 +7,12 @@ import random
 
 class Word(Actor):
 
-    def __init__(self):
-        self.position = Point(0,0)
+    def __init__(self, x, y):
         super().__init__()
-        
+        position = Point(x, y)
+        self.set_position(position)
         self.word = ""
-        velocity = Point(3,0)
+        velocity = Point(1,0)
         self.set_velocity(velocity)
 
     def get_word(self):
@@ -22,6 +22,9 @@ class Word(Actor):
     def set_word(self, word):
         self.word = word
 
+    def reset_word(self, new_word, new_position):
+        self.set_word(new_word)
+        self.set_position(new_position)
 
 
         

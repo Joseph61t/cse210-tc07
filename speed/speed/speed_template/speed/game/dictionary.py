@@ -13,7 +13,7 @@ class Dictionary:
     def load_words(self):
         with open("speed\speed\speed_template\speed\game\dict.txt") as file:
             for line in file:
-                self._words.append(line)
+                self._words.append(line.strip('\n'))
             # print('done loading words')
 
     # returns a random word from the list

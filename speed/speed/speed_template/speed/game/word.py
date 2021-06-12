@@ -22,6 +22,9 @@ class Word(Actor):
     def set_word(self, word):
         self.word = word
 
+    def reset_word(self, new_word, new_position):
+        self.set_word(new_word)
+        self.set_position(new_position)
 
 
         

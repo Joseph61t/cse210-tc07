@@ -40,5 +40,5 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # Hunter Powell
+* # Hunter Powell pow16007@byui.edu
 * # Joseph Hampton
